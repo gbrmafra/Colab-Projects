@@ -1,2 +1,11 @@
 # Colab-Projects
-VielF
+Resumo código - Gabriel Mafra e Lucas Faro
+O código tem as operações de leitura de imagem, conversão para cinza, conversão para negativo, ajuste de contraste e brilho e suavização da imagem.
+ O código "conversão de imagem RGB em imagem Grayscale" tem a função de selecionar a imagem pela câmera do computador ou notebook e mudar as cores da imagem, fazendo diversas operações na imagem. A imagem é carregada e armazenada na variavel. Após isso o código a transforma em uma imagem com a escala de cor cinza e o armazena em uma variavel. Logo, a imagem é transformada em "colorida" e armazenada em uma nova variavel. Em seguida o código a transforma em negativo, invertendo os valores dos pixels. Após isso as imagens são exibidas na tela.
+Em seguida são definidos valores para contraste e brilho da imagem, para alterar esses aspectos. Assim as imagens são exibidas na tela. 
+Ao final o código cria um filtro com matriz, dividindo os elementos por 25 e mostrando a imagem na tela. 
+Os processos acontecem da seguinte maneira: No começo do código as bibliotecas que serão usadas são importadas. As bibliotecas usadas são cv2, numpy, matplotlib.pyplot. Para abrir a imagem é usada a biblioteca cv2 com imread, assim é exibida a imagem que foi carregada. Para mostrar a imagem é usado cv2 com o imshow.
+Para mudar as cores para cinza a imagem é separada em 3 canais de cores R G B, após isso os dados da imagem são convertidos usando o np.array e novamente a imagem é mostrada n atela com o cv2 e imshow. 
+Na troca de cores para negativo para ficar colorido você deve digitar 1, para negativo você deve digitar 0. No processo para transformação de colorida para negativo são subtraidos cada pixel da imagem, assim invertendo as cores. Novamente a imagem é mostrada usando o msmo processo: cv2 e imshow.
+Para o contraste e brilho são criadas duas variaveis, "a" e "b", a recebe -1 e b recebe 1. O código faz uma operação de multiplicar os números das cores por -1 que é o "a" e depois adiciona 1 que é o "b", assim podendo alterar o contraste e brilho e novamente as imagens são mostradas na tela com cv2 e imshow.
+A parte do filtro espacial funciona desfocando a imagem. A operação utiliza kernel, os 25 pixels abaixo de kernel somem, assim o programa faz a média e substitui o pixel central pelo novo valor. 
